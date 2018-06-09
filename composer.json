@@ -22,7 +22,15 @@
       "url": "https://packages.drupal.org/8"
     }
   ],
-  "require": {},
+  "require": {
+    "drupal/google_analytics": "^2.2",
+    "drupal/metatag": "^1.5",
+    "drupal/schema_metatag": "^1.3",
+    "drupal/pathauto": "^1.2",
+    "drupal/yoast_seo": "^2.0-alpha3",
+    "drupal/redirect": "^1.2",
+    "drupal/simple_sitemap": "^2.12"
+  },
   "extra": {
     "branch-alias": {
       "dev-8.x-5.x": "8.5.x-dev"
