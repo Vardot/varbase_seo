@@ -9,7 +9,7 @@ tags:
   rights: '©[current-date:html_year] [site:name]. All rights reserved.'
   shortlink: '[current-page:url:unaliased]'
   generator: Varbase
-  referrer: origin
+  referrer: '[current-page:url:absolute]'
   google_plus_image: '[site:url][default-active-theme:path]/share-image.png'
   mobileoptimized: width
   apple_mobile_web_app_capable: 'yes'
