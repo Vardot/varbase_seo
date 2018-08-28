@@ -4,3 +4,33 @@
  * @file
  * Install, update and uninstall functions for the Varbase SEO module.
  */
+
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Implements hook_install().
+ *
+ * @see system_install()
+ */
+function varbase_seo_install() {
+
+  // Enable Google Analytics
+  if (!\Drupal::moduleHandler()->moduleExists('google_analytics')) {
+    \Drupal::service('module_installer')->install(['google_analytics'], FALSE);
+  }
+
+  $module_path = Drupal::service('module_handler')->getModule('varbase_seo')->getPath();
+
+  $optional_configs = [
+    'google_analytics.settings',
+  ];
+
+  foreach($optional_configs as $optional_config) {
+    $config_path = $module_path . '/config/optional/' . $optional_config . '.yml';
+    $config_content = file_get_contents($config_path);
+    $config_data = (array) Yaml::parse($config_content);
+    $config_factory = \Drupal::configFactory()->getEditable($optional_config);
+    $config_factory->setData($config_data)->save(TRUE);
+  }
+
+}
