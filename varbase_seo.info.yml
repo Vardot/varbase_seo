@@ -3,7 +3,6 @@ description: 'Provide SEO Core features and settings.'
 type: module
 dependencies:
   - field
-  - google_analytics
   - metatag
   - metatag_facebook
   - metatag_google_plus
