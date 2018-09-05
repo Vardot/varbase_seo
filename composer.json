@@ -48,12 +48,6 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patches": {
-      "drupal/rabbit_hole": {
-        "Issue #2961738: Ensure getOperation method exists on form":
-        "https://www.drupal.org/files/issues/2018-05-10/rabbit_hole-instance_of_check-2961738-5.patch"
-      }
-    }
+    "composer-exit-on-patch-failure": true
   }
 }
