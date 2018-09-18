@@ -1,8 +1,11 @@
 name: 'Varbase SEO'
 description: 'Provide Search Engine Optimization (SEO) Core features and settings.'
 type: module
+core: 8.x
+version: 8.x-6.x-dev
+project: varbase
+package: Varbase
 dependencies:
-  - field
   - metatag
   - metatag_facebook
   - metatag_google_plus
@@ -11,7 +14,6 @@ dependencies:
   - metatag_open_graph
   - metatag_twitter_cards
   - metatag_verification
-  - node
   - pathauto
   - rdf
   - redirect
@@ -22,9 +24,5 @@ dependencies:
   - schema_web_page
   - schema_web_site
   - simple_sitemap
-  - user
   - yoast_seo
-package: Varbase
-version: 8.x-6.x-dev
-core: 8.x
-project: varbase
+
