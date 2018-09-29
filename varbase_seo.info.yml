@@ -6,6 +6,7 @@ version: 8.x-6.x-dev
 package: Varbase
 project: varbase_seo
 dependencies:
+  - drupal:rdf
   - metatag:metatag
   - metatag:metatag_facebook
   - metatag:metatag_google_plus
@@ -15,7 +16,6 @@ dependencies:
   - metatag:metatag_twitter_cards
   - metatag:metatag_verification
   - pathauto:pathauto
-  - rdf:rdf
   - redirect:redirect
   - redirect_404:redirect_404
   - schema_metatag:schema_metatag
