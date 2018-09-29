@@ -17,7 +17,7 @@ dependencies:
   - metatag:metatag_verification
   - pathauto:pathauto
   - redirect:redirect
-  - redirect_404:redirect_404
+  - redirect:redirect_404
   - schema_metatag:schema_metatag
   - schema_metatag:schema_article
   - schema_metatag:schema_item_list
