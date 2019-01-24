@@ -61,6 +61,17 @@ function varbase_seo_install() {
         $config_factory->setData($settings_config_file_data)->save(TRUE);
       }
     }
+
+    // Have general metatag defaults configs in active config.
+    $metatag_defaults_config_files = file_scan_directory($optional_install_path, '/^metatag.metatag_defaults.*\\.(yml)$/i');
+    if (isset($metatag_defaults_config_files) && is_array($metatag_defaults_config_files)) {
+      foreach ($metatag_defaults_config_files as $metatag_defaults_config_file) {
+        $metatag_defaults_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $metatag_defaults_config_file->uri);
+        $metatag_defaults_config_file_data = (array) Yaml::parse($metatag_defaults_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($metatag_defaults_config_file->name);
+        $config_factory->setData($metatag_defaults_config_file_data)->save(TRUE);
+      }
+    }
   }
   // ---------------------------------------------------------------------------
 
