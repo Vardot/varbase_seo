@@ -37,7 +37,7 @@
     "drupal/pathauto": "~1",
     "drupal/yoast_seo": "~1",
     "drupal/redirect": "~1",
-    "drupal/simple_sitemap": "~2"
+    "drupal/simple_sitemap": "~3"
   },
   "extra": {
     "branch-alias": {
