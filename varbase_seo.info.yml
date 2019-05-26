@@ -19,6 +19,7 @@ install:
   - pathauto
   - redirect
   - redirect_404
+  - redirect_domain
   - schema_metatag
   - schema_article
   - schema_item_list
