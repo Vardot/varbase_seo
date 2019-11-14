@@ -21,6 +21,7 @@ permissions:
   - 'administer meta tags'
   - 'administer redirect settings'
   - 'administer redirects'
+  - 'administer scripts'
   - 'administer sitemap settings'
   - 'administer url aliases'
   - 'create page content'
