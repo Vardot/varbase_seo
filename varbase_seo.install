@@ -75,4 +75,23 @@ function varbase_seo_install() {
   }
   // ---------------------------------------------------------------------------
 
+  // If the google analytics module were enabled we load the custom GA settings.
+  if (\Drupal::moduleHandler()->moduleExists('google_analytics')) {
+
+    $google_analytics_managed_optional_path = Drupal::service('module_handler')->getModule('varbase_seo')->getPath() . '/config/managed/google_analytics';
+
+    // Varbase SEO custom google analytics config settings.
+    $google_analytics_managed_optional_configs = [
+      'google_analytics.settings',
+    ];
+
+    foreach ($google_analytics_managed_optional_configs as $config_name) {
+      $config_path = $google_analytics_managed_optional_path . '/' . $config_name . '.yml';
+      $config_content = file_get_contents($config_path);
+      $config_data = (array) Yaml::parse($config_content);
+      $config_factory = \Drupal::configFactory()->getEditable($config_name);
+      $config_factory->setData($config_data)->save(TRUE);
+    }
+  }
+
 }

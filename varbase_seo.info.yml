@@ -27,5 +27,4 @@ install:
   - schema_web_site
   - simple_sitemap
   - yoast_seo
-  - google_analytics
   - script_manager
