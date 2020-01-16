@@ -32,7 +32,7 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
     "drupal/google_analytics": "~3.0",
-    "drupal/metatag": "~1.0",
+    "drupal/metatag": "1.11",
     "drupal/schema_metatag": "~1.0",
     "drupal/pathauto": "~1.0",
     "drupal/yoast_seo": "~1.0",
@@ -50,6 +50,12 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/metatag": {
+         "Issue #3102937 by yasmeensalah, DamienMcKenna, Berdir: Fix Plugin AlternateHandheld is misnamed":
+         "https://www.drupal.org/files/issues/2019-12-24/class-alternateHandheld-not-found-3102937-2.patch"
+      }
+    }
   }
 }
