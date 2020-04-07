@@ -1,11 +1,10 @@
 name: 'Varbase SEO'
 description: 'Provide Search Engine Optimization (SEO) Core features and settings.'
 type: module
-core: 8.x
+core_version_requirement: ^8 || ^9
 version: 8.x-6.x-dev
 package: Varbase
 project: varbase_seo
-core_version_requirement: ^8 || ^9
 dependencies: []
 install:
   - rdf
