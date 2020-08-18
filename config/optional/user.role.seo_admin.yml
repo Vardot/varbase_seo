@@ -1,9 +1,6 @@
-uuid: 5f9cabd0-d5f6-4e70-86d0-dbfa08eb5ead
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 1Q0giwo6sp9hKVXWLj-AqSmwqfHPTSK0knZI1lhNTCg
 id: seo_admin
 label: 'SEO Admin'
 weight: -6
