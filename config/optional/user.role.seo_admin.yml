@@ -7,6 +7,7 @@ weight: -6
 is_admin: null
 permissions:
   - 'Flush all caches from admin toolbar'
+  - 'access admin audit trail'
   - 'access administration pages'
   - 'access coffee'
   - 'access content overview'
