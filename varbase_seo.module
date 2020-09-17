@@ -10,6 +10,8 @@ use Symfony\Component\Yaml\Yaml;
 
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * Alter node form.
  */
 function varbase_seo_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['field_yoast_seo']) &&
@@ -18,6 +20,26 @@ function varbase_seo_form_node_form_alter(&$form, FormStateInterface $form_state
       isset($form['field_yoast_seo']['widget']['0']['yoast_seo'])) {
     $form['field_yoast_seo']['widget']['0']['yoast_seo']['#title'] = t('Real-time SEO analyzer');
   }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * Alter Metatag defaults edit form.
+ */
+function varbase_seo_form_metatag_defaults_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Override Entity type / Group Mapping will be reflected on
+  // Metatags General form.
+  $metatag_defaults = $form_state->getformObject()->getEntity();
+  $metatag_manager = \Drupal::service('metatag.manager');
+  $values = $metatag_defaults->get('tags');
+  $form = $metatag_manager->form($values, $form);
+
+  // Move Active checkbox to the bottom of the form.
+  $status = $form['status'];
+  unset($form['status']);
+  $form['status'] = $status;
 }
 
 /**
