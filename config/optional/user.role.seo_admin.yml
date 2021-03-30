@@ -90,6 +90,7 @@ permissions:
   - 'update any varbase_modal_block block content'
   - 'update any varbase_rich_text_block block content'
   - 'update content translations'
+  - 'use media_bulk_upload bulk upload form'
   - 'use moderation sidebar'
   - 'use text format code_html'
   - 'use text format full_html'
