@@ -66,3 +66,39 @@ function varbase_seo_modules_installed($modules) {
   }
 
 }
+
+/**
+ * Implements hook_pathauto_punctuation_chars_alter().
+ *
+ * Alter the list of punctuation characters for Pathauto control.
+ *
+ * @param array $punctuation
+ *   An array of punctuation to be controlled by Pathauto during replacement
+ *   keyed by punctuation name. Each punctuation record should be an array
+ *   with the following key/value pairs:
+ *   - value: The raw value of the punctuation mark.
+ *   - name: The human-readable name of the punctuation mark. This must be
+ *     translated using t() already.
+ */
+function varbase_seo_pathauto_punctuation_chars_alter(array &$punctuation) {
+  $punctuation['copyright'] = ['value' => '©', 'name' => t('Copyright symbol')];
+  $punctuation['trademark'] = ['value' => '™', 'name' => t('Trademark')];
+  $punctuation['registered_trademark'] = ['value' => '®', 'name' => t('Registered trademark')];
+  $punctuation['left_double_quotation'] = ['value' => '"', 'name' => t('Left double quotation')];
+  $punctuation['right_double_quotation'] = ['value' => '"', 'name' => t('Right double quotation')];
+
+  // Add the Arabic diacritics and special symbols.
+  $punctuation['fatha'] = ['value' => 'َ', 'name' => t('Fatha symbol')];
+  $punctuation['damma'] = ['value' => 'ُ', 'name' => t('Damma symbol')];
+  $punctuation['ksrah'] = ['value' => 'ِ', 'name' => t('Ksrah symbol')];
+  $punctuation['tanween_fateh'] = ['value' => 'ًِ', 'name' => t('Tanween fateh symbol')];
+  $punctuation['tanween_dumm'] = ['value' => 'ٌِ', 'name' => t('Tanween dumm symbol')];
+  $punctuation['tanween_kser'] = ['value' => 'ٍِ', 'name' => t('Tanween kser symbol')];
+  $punctuation['shaddah'] = ['value' => 'ّ', 'name' => t('Shaddah symbol')];
+  $punctuation['sokon'] = ['value' => 'ْ', 'name' => t('Sokoon symbol')];
+  $punctuation['maddah'] = ['value' => 'ِ~', 'name' => t('Maddah symbol')];
+  $punctuation['tamdeed'] = ['value' => 'ِـ', 'name' => t('Tamdeed symbol')];
+  $punctuation['right_guillemet'] = ['value' => '»', 'name' => t('Right Guillemet symbol')];
+  $punctuation['left_guillemet'] = ['value' => '«', 'name' => t('Left Guillemet symbol')];
+  $punctuation['question_mark_rtl'] = ['value' => '؟', 'name' => t('Question mark rtl')];
+}
