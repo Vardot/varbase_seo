@@ -37,7 +37,7 @@
     "drupal/pathauto": "~1.0",
     "drupal/yoast_seo": "~1.0",
     "drupal/redirect": "~1.0",
-    "drupal/simple_sitemap": "~3.0",
+    "drupal/simple_sitemap": "~4.0",
     "drupal/google_tag": "~1.0",
     "drupal/script_manager": "~1.0"
   },
