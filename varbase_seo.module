@@ -7,6 +7,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\Yaml\Yaml;
+use Vardot\Entity\EntityDefinitionUpdateManager;
 
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
@@ -64,6 +65,12 @@ function varbase_seo_modules_installed($modules) {
       $config_factory->setData($config_data)->save(TRUE);
     }
   }
+
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
+    ->applyUpdates();
 
 }
 
