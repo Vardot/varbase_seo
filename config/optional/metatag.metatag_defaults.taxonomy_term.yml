@@ -1,9 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: taxonomy_term
-label: 'Taxonomy term'
+label: "Taxonomy term"
 tags:
-  title: '[term:name] | [site:name]'
-  description: '[term:description]'
-  abstract: '[term:description]'
+  title: "[term:name] | [site:name]"
+  description: "[term:description]"
+  abstract: "[term:description]"

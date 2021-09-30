@@ -1,8 +1,8 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: user
 label: User
 tags:
-  title: '[user:name] | [site:name]'
+  title: "[user:name] | [site:name]"
   og_type: profile

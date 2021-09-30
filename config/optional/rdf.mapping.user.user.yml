@@ -7,8 +7,8 @@ id: user.user
 targetEntityType: user
 bundle: user
 types:
-  - 'schema:Person'
+  - "schema:Person"
 fieldMappings:
   name:
     properties:
-      - 'schema:name'
+      - "schema:name"
