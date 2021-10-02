@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\varbase_api\FunctionalJavascript;
+namespace Drupal\Tests\varbase_seo\FunctionalJavascript;
 
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
