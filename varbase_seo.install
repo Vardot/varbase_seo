@@ -126,17 +126,15 @@ function varbase_seo_update_90001() {
 
   // Add enable entity types if it was notin the pathauto settings in the active site configs.
   $enabled_entity_types = $pathauto_settings->get('enabled_entity_types');
-  if (isset($enabled_entity_types)
-    && is_array($enabled_entity_types)
-    && !(count($enabled_entity_types) > 0)) {
+  if (!isset($enabled_entity_types)
+    || (isset($enabled_entity_types) && is_array($enabled_entity_types) && !(count($enabled_entity_types) > 0))) {
     $pathauto_settings->set('enabled_entity_types', ['user'])->save(TRUE);
   }
 
   // Add the list of safe tokens if it was not in the pathauto settings in the active site configs.
   $safe_tokens = $pathauto_settings->get('safe_tokens');
-  if (isset($safe_tokens)
-    && is_array($safe_tokens)
-    && !(count($safe_tokens) > 0)) {
+  if (!isset($safe_tokens)
+    || (isset($safe_tokens) && is_array($safe_tokens) && !(count($safe_tokens) > 0))) {
 
     $safe_tokens = [
       'alias',
