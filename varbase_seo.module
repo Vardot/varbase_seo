@@ -6,8 +6,8 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Symfony\Component\Yaml\Yaml;
 use Vardot\Entity\EntityDefinitionUpdateManager;
+use Vardot\Installer\ModuleInstallerFactory;
 
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
@@ -50,20 +50,11 @@ function varbase_seo_modules_installed($modules) {
   // When we enable the Google Analytics module we load the custom GA settings.
   if (in_array('google_analytics', $modules)) {
 
-    $google_analytics_managed_optional_path = Drupal::service('module_handler')->getModule('varbase_seo')->getPath() . '/config/managed/google_analytics';
-
     // Varbase SEO custom google analytics config settings.
     $google_analytics_managed_optional_configs = [
       'google_analytics.settings',
     ];
-
-    foreach ($google_analytics_managed_optional_configs as $config_name) {
-      $config_path = $google_analytics_managed_optional_path . '/' . $config_name . '.yml';
-      $config_content = file_get_contents($config_path);
-      $config_data = (array) Yaml::parse($config_content);
-      $config_factory = \Drupal::configFactory()->getEditable($config_name);
-      $config_factory->setData($config_data)->save(TRUE);
-    }
+    ModuleInstallerFactory::importConfigsFromList('varbase_seo', $google_analytics_managed_optional_configs, 'config/managed/google_analytics');
 
     // Entity updates to clear up any mismatched entity and/or field definitions
     // And Fix changes were detected in the entity type and field definitions.
