@@ -42,7 +42,7 @@ function varbase_seo_install() {
   $forced_configs_import_after_entity_updates = [
     'views.view.redirect_404',
   ];
-  ModuleInstallerFactory::importConfigsFromList('varbase_seo', $forced_configs_import_after_entity_update);
+  ModuleInstallerFactory::importConfigsFromList('varbase_seo', $forced_configs_import_after_entity_updates);
 
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
