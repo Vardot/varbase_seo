@@ -38,13 +38,19 @@
     "drupal/schema_metatag": "~2.0",
     "drupal/pathauto": "~1.0",
     "drupal/yoast_seo": "~1.0",
-    "drupal/redirect": "~1.0",
+    "drupal/redirect": "1.7",
     "drupal/simple_sitemap": "~4.0",
     "drupal/google_tag": "~1.0",
     "drupal/script_manager": "~1.0"
   },
   "extra": {
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/redirect": {
+        "Issue #2879648: Redirects from aliased paths aren't triggered":
+        "https://www.drupal.org/files/issues/2021-06-18/redirect-path-alias-2879648-129.patch"
+      }
+    }
   }
 }
