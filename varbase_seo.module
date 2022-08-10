@@ -92,12 +92,20 @@ function varbase_seo_pathauto_punctuation_chars_alter(array &$punctuation) {
     'name' => t('Registered trademark'),
   ];
   $punctuation['left_double_quotation'] = [
-    'value' => '"',
+    'value' => '”',
     'name' => t('Left double quotation'),
   ];
   $punctuation['right_double_quotation'] = [
-    'value' => '"',
+    'value' => '“',
     'name' => t('Right double quotation'),
+  ];
+  $punctuation['en_dash'] = [
+    'value' => '–',
+    'name' => t('En dash'),
+  ];
+  $punctuation['em_dash'] = [
+    'value' => '—',
+    'name' => t('Em dash'),
   ];
 
   // Add the Arabic diacritics and special symbols.
