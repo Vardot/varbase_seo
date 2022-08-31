@@ -51,7 +51,7 @@
         "Issue #2879648: Redirects from aliased paths aren't triggered":
         "https://www.drupal.org/files/issues/2022-08-31/2879648-142.patch",
         "Issue #3057250: Validation issue on adding url redirect":
-        "https://www.drupal.org/files/issues/2021-09-09/redirect-3057250-49-drop-ajax-validation.patch"
+        "https://www.drupal.org/files/issues/2022-08-31/3057250-52.patch"
       }
     }
   }
