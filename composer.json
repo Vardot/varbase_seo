@@ -33,7 +33,7 @@
     "drupal/core": "~9.0 || ~10.0",
     "vardot/entity-definition-update-manager": "~1.0",
     "vardot/module-installer-factory": "~1.0",
-    "drupal/google_analytics": "~3.0",
+    "drupal/google_analytics": "3.1.0",
     "drupal/metatag": "^1.12",
     "drupal/schema_metatag": "~2.0",
     "drupal/pathauto": "~1.0",
@@ -52,6 +52,10 @@
         "https://www.drupal.org/files/issues/2022-08-31/2879648-142.patch",
         "Issue #3057250: Validation issue on adding url redirect":
         "https://www.drupal.org/files/issues/2022-08-31/3057250-52.patch"
+      },
+      "drupal/google_analytics": {
+        "Issue #3258588: Fix Deprecated function: Return type of Drupal google_analytics Component Render GoogleAnalyticsJavaScriptSnippet::jsonSerialize() should either be compatible with JsonSerializable::jsonSerialize(): mixed or #[ReturnTypeWillChange]":
+        "https://www.drupal.org/files/issues/2022-09-26/google_analytics-deprecated_function-3258588-57.patch"
       }
     }
   }
