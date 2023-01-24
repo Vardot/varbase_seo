@@ -43,7 +43,6 @@ class VarbaseSeoJavascriptSnippetsTest extends WebDriverTestBase {
    * {@inheritdoc}
    */
   protected static $modules = [
-    'rdf',
     'metatag',
     'metatag_facebook',
     'metatag_google_plus',

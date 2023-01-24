@@ -5,7 +5,6 @@ core_version_requirement: ^9 || ^10
 package: Varbase
 dependencies: []
 install:
-  - rdf
   - metatag
   - metatag_facebook
   - metatag_google_plus

@@ -6,7 +6,7 @@ use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
- * Tests Varbase SEO default cofnig test.
+ * Tests Varbase SEO default config test.
  *
  * @group varbase_seo
  */
@@ -33,7 +33,6 @@ class VarbaseSeoDefaultConfigTest extends WebDriverTestBase {
    * {@inheritdoc}
    */
   protected static $modules = [
-    'rdf',
     'metatag',
     'metatag_facebook',
     'metatag_google_plus',
