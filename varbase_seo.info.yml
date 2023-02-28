@@ -1,9 +1,9 @@
 name: "Varbase SEO"
 description: "Provide Search Engine Optimization (SEO) Core features and settings."
 type: module
-core_version_requirement: ^9 || ^10
+core_version_requirement: ~10.0
 package: Varbase
-dependencies: []
+dependencies: {  }
 install:
   - metatag
   - metatag_facebook
