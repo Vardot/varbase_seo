@@ -6,3 +6,4 @@ permissions:
   - 'administer meta tags'
   - 'use yoast seo'
   - 'administer sitemap settings'
+  - 'clone script entity'

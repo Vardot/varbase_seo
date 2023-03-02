@@ -25,3 +25,4 @@ install:
   - simple_sitemap
   - yoast_seo
   - script_manager
+  - entity_clone
