@@ -56,7 +56,9 @@
       },
       "drupal/google_tag": {
         "Issue #3348471: Fix Entity queries must explicitly set whether the query should be access checked or not in GoogleTagManager":
-        "https://www.drupal.org/files/issues/2023-04-11/3348471-6.patch"
+        "https://www.drupal.org/files/issues/2023-04-11/3348471-6.patch",
+        "Issue #3353449: Fix TypeError: array_values(): Argument #1 ($array) must be of type array, null given in array_values() (line 59 in GoogleAnalyticsMigrator":
+        "https://www.drupal.org/files/issues/2023-04-11/3353449-3.patch"
       }
     }
   }
