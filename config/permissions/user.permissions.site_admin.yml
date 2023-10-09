@@ -1,0 +1,9 @@
+id: site_admin
+permissions:
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer scripts'
+  - 'administer meta tags'
+  - 'use yoast seo'
+  - 'administer sitemap settings'
+  - 'clone script entity'

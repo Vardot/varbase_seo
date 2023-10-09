@@ -13,8 +13,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_seo_install() {
 
-  // Processer for install: in varbase_admin.info.yml file using ModuleInstallerFactory.
-  // ---------------------------------------------------------------------------.
+  // Processor for install: in varbase_admin.info.yml file.
   ModuleInstallerFactory::installList('varbase_seo');
 
   // Install optional configs.
@@ -49,6 +48,9 @@ function varbase_seo_install() {
   \Drupal::classResolver()
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_seo');
 
 }
 

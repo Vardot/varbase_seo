@@ -1,0 +1,3 @@
+id: content_admin
+permissions:
+  - 'use yoast seo'
