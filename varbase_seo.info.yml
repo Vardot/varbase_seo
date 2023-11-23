@@ -1,7 +1,7 @@
 name: "Varbase SEO"
 description: "Provide Search Engine Optimization (SEO) Core features and settings."
 type: module
-core_version_requirement: ~10.1.0
+core_version_requirement: ~10
 package: Varbase
 dependencies: {  }
 install:
