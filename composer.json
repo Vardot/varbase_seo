@@ -37,7 +37,7 @@
     "drupal/metatag": "~1 || ~2",
     "drupal/schema_metatag": "~2 || ~3",
     "drupal/pathauto": "~1",
-    "drupal/yoast_seo": "~1",
+    "drupal/yoast_seo": "1.8.0",
     "drupal/redirect": "1.9",
     "drupal/simple_sitemap": "~4",
     "drupal/google_tag": "~1 || ~2",
@@ -53,6 +53,10 @@
         "https://www.drupal.org/files/issues/2023-08-31/2879648-149.patch",
         "Issue #3057250: Validation issue on adding url redirect":
         "https://www.drupal.org/files/issues/2023-08-09/3057250-65.patch"
+      },
+      "drupal/yoast_seo": {
+        "Issue #3362165: Fix Deprecated function: Creation of dynamic property":
+        "https://www.drupal.org/files/issues/2023-11-01/yoast_seo-php8_2-3362165-19.patch"
       }
     }
   }
