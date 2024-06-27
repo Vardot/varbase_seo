@@ -46,7 +46,78 @@ config:
     simple_sitemap: '*'
     yoast_seo: '*'
     script_manager: '*'
+    varbase_seo:
+      - field.storage.node.field_meta_tags
+      - field.storage.node.field_yoast_seo
   actions:
+    metatag.settings:
+      simple_config_update: 
+        entity_type_groups:
+          node:
+            landing_page:
+              basic: basic
+            landing_page_lb:
+              basic: basic
+            page:
+              basic: basic
+            varbase_blog:
+              basic: basic
+    pathauto.settings:
+      simple_config_update: 
+        enabled_entity_types:
+          - user
+        punctuation:
+          hyphen: 1
+        verbose: false
+        separator: "-"
+        max_length: 100
+        max_component_length: 100
+        transliterate: true
+        reduce_ascii: false
+        case: true
+        ignore_words: "a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with"
+        update_action: 2
+        safe_tokens:
+          - alias
+          - path
+          - join-path
+          - login-url
+          - url
+          - url-brief
+    redirect.settings:
+      simple_config_update:
+        canonical: false
+        auto_redirect: true
+        default_status_code: 301
+        passthrough_querystring: true
+        warning: false
+        nonclean_to_clean: true
+        ignore_admin_path: true
+        frontpage_redirect: true
+        deslash: true
+        access_check: false
+        normalize_aliases: true
+        content_location_header: false
+        term_path_handler: true
+        route_normalizer_enabled: true
+    simple_sitemap.settings:
+      simple_config_update:
+        max_links: 2000
+        cron_generate: true
+        cron_generate_interval: 0
+        generate_duration: 10000
+        remove_duplicates: true
+        skip_untranslated: true
+        batch_process_limit: 1500
+        xsl: true
+        base_url: ""
+        default_variant: default
+        custom_links_include_images: false
+        excluded_languages: {}
+        enabled_entity_types:
+          - node
+          - taxonomy_term
+          - menu_link_content
     user.role.editor:
       grantPermissions:
         - 'use yoast seo'
