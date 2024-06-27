@@ -7,6 +7,8 @@
 
 use Vardot\Entity\EntityDefinitionUpdateManager;
 use Vardot\Installer\ModuleInstallerFactory;
+use Drupal\Core\Recipe\Recipe;
+use Drupal\Core\Recipe\RecipeRunner;
 
 // Include all helpers and updates.
 include_once __DIR__ . '/includes/helpers.inc';
@@ -17,13 +19,13 @@ include_once __DIR__ . '/includes/updates.inc';
  */
 function varbase_seo_install() {
 
-  // Processor for install: in varbase_admin.info.yml file.
-  ModuleInstallerFactory::installList('varbase_seo');
+  $default_recipe = Recipe::createFromDirectory(__DIR__ . '/recipes/default');
+  RecipeRunner::processRecipe($default_recipe);
 
-  // Install optional configs.
-  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_seo', '/^field.storage.*\\.(yml)$/i');
-  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_seo', '/^.*(settings.yml)$/i');
-  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_seo', '/^metatag.metatag_defaults.*\\.(yml)$/i');
+  // Set the weight of the module after installation of list of modules.
+  // To make sure that any hook or event subscriber worker
+  // after all used modules.
+  ModuleInstallerFactory::setModuleWeightAfterInstallation('varbase_seo', 'set_weight_after');
 
   // If the google analytics module were enabled we load the custom GA settings.
   if (\Drupal::moduleHandler()->moduleExists('google_analytics')) {
@@ -52,8 +54,5 @@ function varbase_seo_install() {
   \Drupal::classResolver()
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
-
-  // Add permissions.
-  ModuleInstallerFactory::addPermissions('varbase_seo');
 
 }
