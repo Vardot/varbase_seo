@@ -2,7 +2,6 @@ name: Varbase SEO - Default
 description: A recipe to manage default installed modules, configs and permissions.
 type: install
 install:
-  - rdf
   - metatag
   - metatag_facebook
   - metatag_google_plus
@@ -25,7 +24,6 @@ install:
   - script_manager
 config:
   import:
-    rdf: '*'
     metatag: '*'
     metatag_facebook: '*'
     metatag_google_plus: '*'
