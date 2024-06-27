@@ -1,0 +1,73 @@
+name: Varbase SEO - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - metatag
+  - metatag_facebook
+  - metatag_google_plus
+  - metatag_hreflang
+  - metatag_mobile
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - metatag_verification
+  - pathauto
+  - redirect
+  - redirect_404
+  - redirect_domain
+  - schema_metatag
+  - schema_article
+  - schema_item_list
+  - schema_web_page
+  - schema_web_site
+  - simple_sitemap
+  - yoast_seo
+  - script_manager
+  - entity_clone
+config:
+  import:
+    metatag: '*'
+    metatag_facebook: '*'
+    metatag_google_plus: '*'
+    metatag_hreflang: '*'
+    metatag_mobile: '*'
+    metatag_open_graph: '*'
+    metatag_twitter_cards: '*'
+    metatag_verification: '*'
+    pathauto: '*'
+    redirect: '*'
+    redirect_404: '*'
+    redirect_domain: '*'
+    schema_metatag: '*'
+    schema_article: '*'
+    schema_item_list: '*'
+    schema_web_page: '*'
+    schema_web_site: '*'
+    simple_sitemap: '*'
+    yoast_seo: '*'
+    script_manager: '*'
+    entity_clone: '*'
+  actions:
+    user.role.editor:
+      grantPermissions:
+        - 'use yoast seo'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'administer redirect settings'
+        - 'administer redirects'
+        - 'administer scripts'
+        - 'administer meta tags'
+        - 'use yoast seo'
+        - 'administer sitemap settings'
+        - 'clone script entity'
+    user.role.content_admin:
+      grantPermissions:
+        - 'use yoast seo'
+    user.role.site_admin:
+      grantPermissions:
+        - 'administer redirect settings'
+        - 'administer redirects'
+        - 'administer scripts'
+        - 'administer meta tags'
+        - 'use yoast seo'
+        - 'administer sitemap settings'
+        - 'clone script entity'
