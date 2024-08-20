@@ -56,10 +56,13 @@ config:
           node:
             landing_page:
               basic: basic
+              open_graph: open_graph
             landing_page_lb:
               basic: basic
+              open_graph: open_graph
             page:
               basic: basic
+              open_graph: open_graph
             varbase_blog:
               basic: basic
     pathauto.settings:
