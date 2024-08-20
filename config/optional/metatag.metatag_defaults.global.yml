@@ -17,8 +17,8 @@ tags:
   og_type: website
   og_title: "[current-page:title] | [site:name]"
   og_site_name: "[site:name]"
-  og_image: "[site:origin-url]/[default-active-theme:path]/share-image.png"
-  og_url: "[current-page:url:absolute]"
+  og_image_url: "[node:share-image]"
+  og_image: "[node:share-image]"
   og_image_url: "[site:origin-url]/[default-active-theme:path]/share-image.png"
   twitter_cards_page_url: "[current-page:url:absolute]"
   twitter_cards_image: "[site:origin-url]/[default-active-theme:path]/share-image.png"

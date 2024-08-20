@@ -8,8 +8,8 @@ tags:
   abstract: "[node:summary]"
   description: "[node:summary]"
   google_plus_image: "[node:field_image:entity:field_image:social_large:url]"
-  og_image_url: "[node:field_image:entity:field_image:social_large:url]"
-  og_image: "[node:field_image:entity:field_image:social_large:url]"
+  og_image_url: "[node:share-image]"
+  og_image: "[node:share-image]"
   og_type: article
   og_description: "[node:summary]"
   twitter_cards_description: "[node:summary]"
