@@ -25,7 +25,6 @@ install:
   - entity_clone
 config:
   import:
-    metatag: '*'
     metatag_facebook: '*'
     metatag_google_plus: '*'
     metatag_hreflang: '*'
@@ -47,24 +46,16 @@ config:
     script_manager: '*'
     entity_clone: '*'
     varbase_seo:
+      - metatag.metatag_defaults.403
+      - metatag.metatag_defaults.404
+      - metatag.metatag_defaults.front
+      - metatag.metatag_defaults.global
+      - metatag.metatag_defaults.node
+      - metatag.metatag_defaults.taxonomy_term
+      - metatag.metatag_defaults.user
       - field.storage.node.field_meta_tags
       - field.storage.node.field_yoast_seo
   actions:
-    metatag.settings:
-      simple_config_update: 
-        entity_type_groups:
-          node:
-            landing_page:
-              basic: basic
-              open_graph: open_graph
-            landing_page_lb:
-              basic: basic
-              open_graph: open_graph
-            page:
-              basic: basic
-              open_graph: open_graph
-            varbase_blog:
-              basic: basic
     pathauto.settings:
       simple_config_update: 
         enabled_entity_types:

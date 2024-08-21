@@ -1,0 +1,20 @@
+entity_type_groups:
+  node:
+    landing_page:
+      basic: basic
+      open_graph: open_graph
+    landing_page_lb:
+      basic: basic
+      open_graph: open_graph
+    page:
+      basic: basic
+      open_graph: open_graph
+    varbase_blog:
+      basic: basic
+    varbase_heroslider:
+      basic: basic
+separator: ''
+tag_trim_method: beforeValue
+use_maxlength: true
+tag_trim_maxlength: {  }
+tag_scroll_max_height: ''

@@ -1,17 +1,12 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: node
 label: Content
 tags:
-  title: "[node:title] | [site:name]"
-  abstract: "[node:summary]"
-  description: "[node:summary]"
-  google_plus_image: "[node:field_image:entity:field_image:social_large:url]"
-  og_image_url: "[node:share-image]"
-  og_image: "[node:share-image]"
-  og_type: article
-  og_description: "[node:summary]"
-  twitter_cards_description: "[node:summary]"
-  twitter_cards_image: "[node:field_image:entity:field_image:social_small:url]"
-  twitter_cards_type: summary_large_image
+  title: '[node:title] | [site:name]'
+  description: '[node:summary]'
+  canonical_url: '[node:url]'
+  og_image: '[node:share-image]'
+  og_image_secure_url: '[node:share-image]'
+  og_image_url: '[node:share-image]'
