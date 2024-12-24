@@ -24,10 +24,10 @@
   },
   "require": {
     "drupal/core": "~10.4.0 || ~11.1.0",
-    "vardot/varbase-patches": "~10",
+    "vardot/varbase-patches": "~10.1.0 || 10.1.x-dev",
     "vardot/entity-definition-update-manager": "~1",
     "vardot/module-installer-factory": "~1",
-    "drupal/google_analytics": "~3 || ~4",
+    "drupal/google_analytics": "~4",
     "drupal/metatag": "~2",
     "drupal/schema_metatag": "~3",
     "drupal/pathauto": "~1",
