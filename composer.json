@@ -20,6 +20,7 @@
     "vardot/varbase-patches": "~10.1.0",
     "drupal/google_analytics": "~4",
     "drupal/metatag": "~2",
+    "drupal/eca_metatag": "~2",
     "drupal/schema_metatag": "~3",
     "drupal/pathauto": "~1",
     "drupal/yoast_seo": "~2",

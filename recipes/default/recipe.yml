@@ -3,6 +3,7 @@ description: A recipe to manage default installed modules, configs and permissio
 type: install
 install:
   - metatag
+  - eca_metatag
   - metatag_facebook
   - metatag_google_plus
   - metatag_hreflang
