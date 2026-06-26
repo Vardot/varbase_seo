@@ -1,0 +1,6 @@
+services:
+  Drupal\varbase_seo\Hook\VarbaseSeoHooks:
+    class: Drupal\varbase_seo\Hook\VarbaseSeoHooks
+    arguments:
+      - '@?metatag.manager'
+      - '@class_resolver'
