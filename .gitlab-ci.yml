@@ -92,6 +92,12 @@ webship-js-test:
     # Install Varbase SEO via the module installer API (bypasses interactive
     # hook_requirements prompts and leniently skips optional configs that
     # reference Varbase-only roles absent on the Standard profile).
+    # Pre-create the Varbase roles that varbase_seo's optional config grants to
+    # (absent on the Standard profile; Drupal 11.4 validates the references).
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT role:create editor 'Editor' || true
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT role:create content_admin 'Content admin' || true
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT role:create site_admin 'Site admin' || true
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT role:create seo_admin 'SEO admin' || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT php:eval '\Drupal::service("module_installer")->install(["varbase_seo", "metatag", "pathauto", "redirect", "simple_sitemap"]);' || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
     - !reference [.fragments, node_playwright]
@@ -109,6 +115,10 @@ webship-js-test:
 
 # Allow the Varbase stack Composer plugins in the CI build (allow-plugins lives in varbase_project, not modules).
 composer:
+  variables:
+    # Drupal 11.4.0 released 2026-07-01; pinned templates ref $CORE_STABLE is still 11.3.
+    DRUPAL_CORE: "11.4.0"
+    IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
   before_script:
     - composer config --no-plugins allow-plugins.composer/installers true || true
     - composer config --no-plugins allow-plugins.cweagans/composer-patches true || true
@@ -120,4 +130,4 @@ composer:
     - composer config --no-plugins allow-plugins.php-http/discovery true || true
     - composer config --no-plugins allow-plugins.tbachert/spi true || true
     - composer config --no-plugins allow-plugins.vardot/varbase-patches true || true
-    - composer require --no-update vardot/varbase-patches:~9.2.0
+    - composer require --no-update vardot/varbase-patches:9.2.x-dev
