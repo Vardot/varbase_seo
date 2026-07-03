@@ -1,0 +1,7 @@
+name: 'Varbase SEO Test'
+description: 'Provisions a site for the Varbase SEO automated browser tests: pre-creates the Varbase roles (editor, seo_admin, content_admin, site_admin) that the module grants SEO permissions to, then installs Varbase SEO. Installing the module runs its own default recipe, which enables the SEO contrib stack (Metatag, Pathauto, Redirect, Simple XML Sitemap, Yoast SEO, Schema Metatag, ...) and configures it. The login, core administration and SEO administration scenarios only need this set (the Webmaster super-admin can reach every admin route).'
+type: 'Testing'
+recipes:
+  - varbase_seo_test_roles
+install:
+  - varbase_seo

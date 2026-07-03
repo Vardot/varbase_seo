@@ -1,33 +1,43 @@
 {
-  "name": "drupal/varbase_seo",
-  "description": "Provide Search Engine Optimization (SEO) Core features and settings.",
-  "type": "drupal-module",
-  "homepage": "https://www.drupal.org/project/varbase_seo",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
-      "role": "Maintainer"
+    "name": "drupal/varbase_seo",
+    "description": "Provide Search Engine Optimization (SEO) Core features and settings.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/varbase_seo",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Vardot",
+            "homepage": "https://www.drupal.org/vardot",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/varbase_seo",
+        "source": "http://cgit.drupalcode.org/varbase_seo"
+    },
+    "require": {
+        "drupal/core": "~11.4.0",
+        "vardot/varbase-patches": "~10.1.0",
+        "drupal/google_analytics": "~4",
+        "drupal/metatag": "~2",
+        "drupal/eca_metatag": "~2",
+        "drupal/schema_metatag": "~3",
+        "drupal/pathauto": "~1",
+        "drupal/yoast_seo": "~2",
+        "drupal/redirect": "~1",
+        "drupal/simple_sitemap": "~4",
+        "drupal/google_tag": "~2",
+        "drupal/script_manager": "~2",
+        "drupal/entity_clone": "~2"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true,
+            "vardot/varbase-patches": true,
+            "cweagans/composer-patches": true,
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        }
     }
-  ],
-  "support": {
-    "issues": "https://www.drupal.org/project/issues/varbase_seo",
-    "source": "http://cgit.drupalcode.org/varbase_seo"
-  },
-  "require": {
-    "drupal/core": "~11.3.0",
-    "vardot/varbase-patches": "~10.1.0",
-    "drupal/google_analytics": "~4",
-    "drupal/metatag": "~2",
-    "drupal/eca_metatag": "~2",
-    "drupal/schema_metatag": "~3",
-    "drupal/pathauto": "~1",
-    "drupal/yoast_seo": "~2",
-    "drupal/redirect": "~1",
-    "drupal/simple_sitemap": "~4",
-    "drupal/google_tag": "~2",
-    "drupal/script_manager": "~2",
-    "drupal/entity_clone": "~2"
-  }
 }

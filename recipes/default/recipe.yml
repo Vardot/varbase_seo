@@ -58,7 +58,7 @@ config:
       - field.storage.node.field_yoast_seo
   actions:
     pathauto.settings:
-      simple_config_update: 
+      simple_config_update:
         enabled_entity_types:
           - user
         punctuation:
