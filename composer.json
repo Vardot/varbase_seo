@@ -26,7 +26,7 @@
         "drupal/yoast_seo": "~2",
         "drupal/redirect": "~1",
         "drupal/simple_sitemap": "~4",
-        "drupal/google_tag": "~2",
+        "drupal/google_tag": "~2.1.0",
         "drupal/script_manager": "~2",
         "drupal/entity_clone": "~2"
     },
