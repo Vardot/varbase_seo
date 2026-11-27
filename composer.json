@@ -16,19 +16,19 @@
         "source": "http://cgit.drupalcode.org/varbase_seo"
     },
     "require": {
-        "drupal/core": "~11.4.0",
+        "drupal/core": "^11.4 || ^12.0",
         "vardot/varbase-patches": "~10.1.0",
-        "drupal/google_analytics": "~4",
-        "drupal/metatag": "~2",
-        "drupal/eca_metatag": "~2",
-        "drupal/schema_metatag": "~3",
-        "drupal/pathauto": "~1",
-        "drupal/yoast_seo": "~2",
-        "drupal/redirect": "~1",
-        "drupal/simple_sitemap": "~4",
-        "drupal/google_tag": "~2.1.0",
-        "drupal/script_manager": "~2",
-        "drupal/entity_clone": "~2"
+        "drupal/google_analytics": "^4",
+        "drupal/metatag": "^2",
+        "drupal/eca_metatag": "^2",
+        "drupal/schema_metatag": "^3",
+        "drupal/pathauto": "^1",
+        "drupal/yoast_seo": "^2",
+        "drupal/redirect": "^1",
+        "drupal/simple_sitemap": "^4",
+        "drupal/google_tag": "^2.1.0",
+        "drupal/script_manager": "^2",
+        "drupal/entity_clone": "^2"
     },
     "config": {
         "allow-plugins": {
